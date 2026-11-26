@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026학년도 용인·수원 중등정보교육연구회 11월 모임</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --a:#2F6BFF;--a2:#16C6E0;--b:#FF6B3D;--b2:#FFB020;--c:#14A86C;--c2:#18B8C9;
+  --pt:#f5b301;--bg:#fbfaf5;--ink:#2a3347;--mute:#5d667a;--navy:#1b2a4a;
+  /* 9:16 세로 화면 기준 단위: 화면에 꽉 차는 포스터의 1% 폭 */
+  --u:min(1vw, calc(100vh * 9 / 16 / 100));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#e9edf3;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);word-break:keep-all;overflow-wrap:break-word}
+.nb{white-space:nowrap}
+
+.poster{position:relative;width:calc(var(--u) * 100);height:calc(var(--u) * 177.78);overflow:hidden;
+  background:#fff url(img/school-hero.jpg) center/cover;display:flex;flex-direction:column;align-items:center;text-align:center}
+.poster:before{content:"";position:absolute;inset:0;
+  background:linear-gradient(rgba(255,255,255,.80),rgba(251,250,245,.90) 55%,rgba(251,250,245,.97))}
+.poster>*{position:relative}
+
+/* 상단 색 띠 */
+.bar{position:absolute;top:0;left:0;right:0;height:calc(var(--u)*1.1);
+  background:linear-gradient(90deg,var(--a),var(--a2) 33%,var(--c) 66%,var(--b2))}
+
+/* 부드러운 원형 장식 */
+.blob{position:absolute;border-radius:50%;filter:blur(calc(var(--u)*2));opacity:.28}
+.b1{width:calc(var(--u)*46);height:calc(var(--u)*46);background:var(--a2);top:calc(var(--u)*-12);left:calc(var(--u)*-14)}
+.b2{width:calc(var(--u)*40);height:calc(var(--u)*40);background:var(--c);bottom:calc(var(--u)*18);right:calc(var(--u)*-16)}
+.b3{width:calc(var(--u)*30);height:calc(var(--u)*30);background:var(--b2);bottom:calc(var(--u)*-8);left:calc(var(--u)*-6);opacity:.22}
+
+.top{margin-top:calc(var(--u)*30)}
+.kick{font-family:"Gothic A1",sans-serif;font-weight:300;font-size:calc(var(--u)*3.6);color:var(--navy);
+  letter-spacing:.5em;margin-right:-.5em;display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*2.6)}
+.kick:before,.kick:after{content:"";width:calc(var(--u)*8);height:1px;background:var(--navy);opacity:.5}
+
+.region{font-family:"Gothic A1",sans-serif;font-weight:800;font-size:calc(var(--u)*7.2);letter-spacing:.14em;margin-right:-.14em;
+  margin-top:calc(var(--u)*5);line-height:1.2;
+  background:linear-gradient(120deg,var(--a),var(--a2) 55%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-family:"Gothic A1",sans-serif;font-weight:800;font-size:calc(var(--u)*8.4);letter-spacing:.04em;margin-right:-.04em;
+  color:#14213d;line-height:1.25;margin-top:calc(var(--u)*1.4)}
+
+.month{display:flex;align-items:baseline;justify-content:center;gap:calc(var(--u)*3);margin-top:calc(var(--u)*6);
+  font-family:"Gothic A1",sans-serif;font-weight:800;line-height:1}
+.month .m{font-size:calc(var(--u)*25);letter-spacing:-.02em;
+  background:linear-gradient(150deg,var(--b),var(--b2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.month .g{font-size:calc(var(--u)*12);color:var(--navy);letter-spacing:.1em}
+
+.line{width:3px;height:calc(var(--u)*7);background:var(--pt);border-radius:3px;margin:calc(var(--u)*6) auto calc(var(--u)*5)}
+
+.info{width:calc(var(--u)*80);background:rgba(255,255,255,.94);border-radius:calc(var(--u)*3.2);
+  box-shadow:0 calc(var(--u)*1.2) calc(var(--u)*4) #1e3a8a1f;padding:calc(var(--u)*3) calc(var(--u)*5);text-align:left}
+.row{display:flex;align-items:center;gap:calc(var(--u)*4);padding:calc(var(--u)*3.2) 0}
+.row+.row{border-top:1px solid #1b2a4a1a}
+.tag{flex:none;font-weight:700;font-size:calc(var(--u)*3.4);color:#fff;padding:calc(var(--u)*1) calc(var(--u)*3);border-radius:99px;
+  background:linear-gradient(120deg,var(--a),var(--a2))}
+.row.p .tag{background:linear-gradient(120deg,var(--c),var(--c2))}
+.val{font-weight:500;font-size:calc(var(--u)*4.6);color:var(--navy);line-height:1.45}
+.val small{display:block;font-size:calc(var(--u)*4.2);font-weight:500;color:var(--a)}
+
+.dots{position:absolute;bottom:calc(var(--u)*9);left:0;right:0;display:flex;justify-content:center;gap:calc(var(--u)*2.4)}
+.dots i{width:calc(var(--u)*2.2);height:calc(var(--u)*2.2);border-radius:50%;display:block}
+.dots i:nth-child(1){background:linear-gradient(150deg,var(--a),var(--a2))}
+.dots i:nth-child(2){background:linear-gradient(150deg,var(--b),var(--b2))}
+.dots i:nth-child(3){background:linear-gradient(150deg,var(--c),var(--c2))}
+
+/* 등장 효과 */
+.fx{opacity:0;transform:translateY(calc(var(--u)*3));animation:up 1s ease forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.3s}.d3{animation-delay:.5s}.d4{animation-delay:.75s}.d5{animation-delay:1s}
+@keyframes up{to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<main class="poster">
+  <div class="bar"></div>
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+
+  <div class="top">
+    <div class="kick fx d1">2026학년도</div>
+    <div class="region fx d2">용인·수원</div>
+    <h1 class="fx d2">중등정보교육연구회</h1>
+  </div>
+
+  <div class="month fx d3"><span class="m">11월</span><span class="g">모임</span></div>
+
+  <div class="line fx d4"></div>
+
+  <section class="info fx d5">
+    <div class="row">
+      <span class="tag">일시</span>
+      <span class="val"><span class="nb">11월 26일(목)</span><small><span class="nb">18:00 ~ 20:00</span></small></span>
+    </div>
+    <div class="row p">
+      <span class="tag">장소</span>
+      <span class="val"><span class="nb">어정중학교</span> <span class="nb">컴퓨터실</span></span>
+    </div>
+  </section>
+
+  <div class="dots"><i></i><i></i><i></i></div>
+</main>
+</body>
+</html>
